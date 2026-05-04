@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://appropriate-obvious-donkey-5aj06s.teleporthq.app/sitemap.xml
