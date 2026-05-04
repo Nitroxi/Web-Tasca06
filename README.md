@@ -4,7 +4,7 @@ Aquesta és la proposta de web corporativa de **FoodLogistic S.A.**, una empresa
 
 ## Demostració
 
-[Veure la web publicada](https://nitroxi.github.io/foodlogistic-web/)
+[Veure la web publicada](https://nitroxi.github.io/Web-Tasca06/)
 
 ## Tecnologies utilitzades
 
