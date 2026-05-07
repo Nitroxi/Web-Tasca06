@@ -65,6 +65,7 @@
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./legal.css" />
     <div>
       <link href="./index.css" rel="stylesheet" />
 
@@ -817,7 +818,7 @@
                       />
                       <span>Accepto la</span>
                     </label>
-                    <a href="#politica-privacitat">
+                    <a href="politica-privacitat.html" target="_blank" rel="noopener">
                       <div class="home-container2">
                         <span>Política de Privacitat</span>
                       </div>
@@ -833,7 +834,7 @@
                         class="home-textinput2 input"
                       />
                       <span>
-                        Vull rebre comunicacions comercials segons l'Avís Legal
+                        Vull rebre comunicacions comercials segons l'<a href="avis-legal.html" target="_blank" rel="noopener" style="text-decoration: underline; color: var(--color-accent);">Avís Legal</a>
                       </span>
                     </label>
                   </div>
@@ -1181,12 +1182,12 @@
                 <div class="footer-bottom">
                   <div class="footer-copyright">
                     <span>
-                      &amp;copy; 2026 FoodLogistic S.A. Tots els drets
+                      &copy; 2026 FoodLogistic S.A. Tots els drets
                       reservats.
                     </span>
                   </div>
                   <div class="footer-legal">
-                    <a href="#politica-privacitat">
+                    <a href="politica-privacitat.html">
                       <div
                         class="footer-thq-footer-legal-link-elm1 footer-legal-link"
                       >
@@ -1194,7 +1195,7 @@
                       </div>
                     </a>
                     <span class="footer-legal-divider">|</span>
-                    <a href="#avis-legal">
+                    <a href="avis-legal.html">
                       <div
                         class="footer-thq-footer-legal-link-elm2 footer-legal-link"
                       >
@@ -1202,11 +1203,17 @@
                       </div>
                     </a>
                     <span class="footer-legal-divider">|</span>
-                    <a href="#politica-cookies">
+                    <a href="politica-cookies.html">
                       <div
                         class="footer-thq-footer-legal-link-elm3 footer-legal-link"
                       >
                         <span>Política de Cookies</span>
+                      </div>
+                    </a>
+                    <span class="footer-legal-divider">|</span>
+                    <a href="#" data-action="open-cookie-settings">
+                      <div class="footer-legal-link">
+                        <span>Configurar Cookies</span>
                       </div>
                     </a>
                   </div>
@@ -1251,71 +1258,120 @@
             </div>
           </div>
         </footer-wrapper>
+        <!-- =============== BANNER DE COOKIES =============== -->
         <div data-role="cookie-banner" class="cookie-banner">
           <div class="home-thq-cookie-banner-content-elm">
             <p class="home-thq-cookie-banner-text-elm">
-              Utilitzem cookies pròpies i de tercers per millorar la teva
-              experiència. Pots acceptar-les o rebutjar-les. Més informació a la
-              nostra
+              Utilitzem cookies pròpies i de tercers per garantir el funcionament del lloc web,
+              analitzar-ne l'ús i personalitzar la teva experiència. Pots acceptar-les totes,
+              rebutjar-les o configurar-les per categoria. Més informació a la nostra
             </p>
-            <a href="#politica-cookies" class="home-link6">
+            <a href="politica-cookies.html" class="home-link6">
               <div class="cookie-banner-link">
                 <span>Política de Cookies</span>
               </div>
             </a>
             <div class="home-thq-cookie-banner-actions-elm">
               <button
-                data-action="accept-cookies"
-                class="cookie-btn-accept button btn-primary btn"
+                type="button"
+                data-action="configure-cookies"
+                class="cookie-btn-configure button btn"
               >
-                Acceptar
+                Configurar
               </button>
               <button
+                type="button"
                 data-action="reject-cookies"
                 class="cookie-btn-reject button btn btn-outline"
               >
                 Rebutjar
               </button>
+              <button
+                type="button"
+                data-action="accept-cookies"
+                class="cookie-btn-accept button btn-primary btn"
+              >
+                Acceptar tot
+              </button>
             </div>
           </div>
         </div>
+
+        <!-- =============== MODAL DE CONFIGURACIÓ DE COOKIES =============== -->
+        <div data-role="cookie-modal" class="cookie-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+          <div class="cookie-modal">
+            <h2 id="cookie-modal-title">Configuració de cookies</h2>
+            <p class="cookie-modal-intro">
+              Utilitzem cookies pròpies i de tercers per garantir el funcionament del lloc web,
+              analitzar-ne l'ús, personalitzar la teva experiència i mostrar-te publicitat rellevant.
+              Pots acceptar-les totes, rebutjar-les o configurar-les per categoria. Pots canviar la
+              teva elecció en qualsevol moment des del peu de pàgina.
+            </p>
+
+            <div class="cookie-category">
+              <div class="cookie-category-header">
+                <span class="cookie-category-title">Cookies tècniques (necessàries)</span>
+                <span class="cookie-required-label">Sempre actives</span>
+              </div>
+              <p class="cookie-category-desc">
+                Imprescindibles per al correcte funcionament del lloc web (sessió, seguretat,
+                equilibri de càrrega i preferències bàsiques). No es poden desactivar.
+              </p>
+            </div>
+
+            <div class="cookie-category">
+              <div class="cookie-category-header">
+                <span class="cookie-category-title">Cookies de personalització</span>
+                <label class="cookie-switch">
+                  <input type="checkbox" data-cookie-toggle="preferences" />
+                  <span class="cookie-slider"></span>
+                </label>
+              </div>
+              <p class="cookie-category-desc">
+                Permeten recordar les teves preferències (idioma, regió, configuracions visuals)
+                perquè la teva experiència sigui més còmoda en visites successives.
+              </p>
+            </div>
+
+            <div class="cookie-category">
+              <div class="cookie-category-header">
+                <span class="cookie-category-title">Cookies analítiques i estadístiques</span>
+                <label class="cookie-switch">
+                  <input type="checkbox" data-cookie-toggle="analytics" />
+                  <span class="cookie-slider"></span>
+                </label>
+              </div>
+              <p class="cookie-category-desc">
+                Ens ajuden a entendre com utilitzes el lloc web (pàgines visitades, temps de
+                permanència, errors) per millorar-ne el contingut. Dades anònimes i agregades.
+              </p>
+            </div>
+
+            <div class="cookie-category">
+              <div class="cookie-category-header">
+                <span class="cookie-category-title">Cookies de màrqueting i publicitat</span>
+                <label class="cookie-switch">
+                  <input type="checkbox" data-cookie-toggle="marketing" />
+                  <span class="cookie-slider"></span>
+                </label>
+              </div>
+              <p class="cookie-category-desc">
+                Permeten mostrar-te publicitat rellevant dins i fora del lloc web, i mesurar
+                l'eficàcia de les nostres campanyes. Poden ser instal·lades per tercers.
+              </p>
+            </div>
+
+            <div class="cookie-modal-actions">
+              <button type="button" data-action="modal-reject-all" class="cookie-btn-reject-all">Rebutjar tot</button>
+              <button type="button" data-action="save-cookies" class="cookie-btn-save">Desar selecció</button>
+              <button type="button" data-action="modal-accept-all" class="cookie-btn-accept-all">Acceptar tot</button>
+            </div>
+          </div>
+        </div>
+
         <div class="home-container5">
           <div class="home-container6">
-            <script>
-              (function(){
-                  ;(function () {
-                    document.addEventListener("DOMContentLoaded", function () {
-                      const banner = document.querySelector('[data-role="cookie-banner"]')
-                      const acceptBtn = document.querySelector('[data-action="accept-cookies"]')
-                      const rejectBtn = document.querySelector('[data-action="reject-cookies"]')
-
-                      // Check if user has already made a choice
-                      const cookieChoice = localStorage.getItem("cookieConsent")
-                      if (cookieChoice) {
-                        banner.setAttribute("data-hidden", "true")
-                      }
-
-                      function hideBanner() {
-                        banner.setAttribute("data-hidden", "true")
-                      }
-
-                      if (acceptBtn) {
-                        acceptBtn.addEventListener("click", function () {
-                          localStorage.setItem("cookieConsent", "accepted")
-                          hideBanner()
-                        })
-                      }
-
-                      if (rejectBtn) {
-                        rejectBtn.addEventListener("click", function () {
-                          localStorage.setItem("cookieConsent", "rejected")
-                          hideBanner()
-                        })
-                      }
-                    })
-                  })()
-                })()
-            </script>
+            <script src="./cookies.js" defer></script>
           </div>
         </div>
         <a href="https://play.teleporthq.io/signup">
